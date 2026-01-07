@@ -1,0 +1,22 @@
+# Core dependencies for XML to HTML Sitemap Converter
+
+# Web application framework
+streamlit>=1.28.0
+
+# HTTP requests library for fetching sitemaps and web pages
+requests>=2.31.0
+
+# HTML parsing for extracting page titles
+beautifulsoup4>=4.12.0
+
+# HTML parser for BeautifulSoup (recommended)
+lxml>=4.9.0
+
+# Optional: Faster HTML parsing (already included with beautifulsoup4)
+html5lib>=1.1
+
+# Note: xml.etree.ElementTree is part of Python standard library (no installation needed)
+# Note: urllib.parse is part of Python standard library (no installation needed)
+# Note: re (regex) is part of Python standard library (no installation needed)
+# Note: collections is part of Python standard library (no installation needed)
+# Note: time is part of Python standard library (no installation needed)
