@@ -323,7 +323,12 @@ if st.button("🔍 Discover Sitemaps", type="primary"):
         st.session_state.discovered_sitemaps = discover_sitemaps(sitemap_urls)
         st.session_state.categories = list(st.session_state.discovered_sitemaps.keys())
 
-        st.success("✅ Sitemap discovery complete! Please select categories below.")
+        # Only show success message if categories were actually found
+        if st.session_state.categories:
+            st.success("✅ Sitemap discovery complete! Please select categories below.")
+        else:
+            st.error("❌ No valid sitemaps found. Please check your URLs and try again.")
+            st.info("💡 **Tips:**\n- Ensure the sitemap URLs are accessible\n- Verify the URLs are correct\n- Check if the website has a robots.txt file that lists sitemap locations")
     else:
         st.warning("⚠️ Please enter at least one sitemap URL.")
 
